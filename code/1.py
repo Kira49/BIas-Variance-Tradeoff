@@ -64,7 +64,7 @@ for degree in range (1,21):
     #calculate bias
     point_avg=np.mean(res1,axis=0)
     bias2_avg[degree-1]=np.mean((point_avg-test_y)**2)
-    bias[degree-1]=np.abs(np.mean((point_avg-test_y)))
+    bias[degree-1]=np.mean(np.abs((point_avg-test_y)))
     new_avg=np.mean(res2, axis=0)
     #calculate variance
     point_var = np.var(res1,axis=0)
